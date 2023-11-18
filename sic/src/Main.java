@@ -3,9 +3,10 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) throws IOException {
 
-        disasmXE d = new disasmXE();
-        d.disassemble();
-
+        opcode op = new opcode();
+        op.addInstructionsToTable();
+        System.out.println(op.getOpMnemonic(0X18));
+        System.out.println(op.getOpFormat(0X18));
     }
 }
 
