@@ -6,10 +6,16 @@ public class Main {
         disasmXE d = new disasmXE();
         d.disassemble();
 
+//        System.out.printf(String.format("%04X",2));
+
+//        int opcodeHex = Integer.parseInt("14",16); //getting the opcode from the T record at row
+//        System.out.println(opcodeHex);
+
+//        System.out.println(Integer.parseInt("3C",16));
+//
+//        opcode o = new opcode();
+//        o.addInstructionsToTable();
+//        int y = o.getOpFormat("C0");
+//        System.out.println(y);
     }
 }
-
-//        H.СОРУXX.001000.00107A
-//        T.001000.1E.141033.482039.001036.281030.301015.482061.3C1003.00102A.0C1039.00102D
-//        T.00101E.15.0C1036.482061.081033.4C0000.454546.000003.000000
-//        E.001000
