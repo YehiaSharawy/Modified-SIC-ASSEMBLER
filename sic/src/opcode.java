@@ -74,4 +74,8 @@ public class opcode {
         }
         return 0;
     }
+    // Extract the value of a specific bit in an integer at a given position. The result will be 0 if the bit is originally 0 and 1 if the bit is originally 1 at the specified position.
+    public int getOpBit(int input, int postition){
+        return (input>>postition)&1;
+    }
 }
