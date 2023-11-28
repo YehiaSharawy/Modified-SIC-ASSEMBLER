@@ -46,7 +46,7 @@ public class symboltable {
             if(symbolTable.get(symbol) == pc)
                 return symbol;
         }
-        return " ";
+        return "MSH MWGOOODD";
     }
     public String getSymbol(String address){
         for (String symbol : symbolTableSymbols) // if symbol matches the address, return symbol
@@ -64,7 +64,6 @@ public class symboltable {
             }
         }
     }
-
     public void addSymbol(String address){
         int addressDecimal = Integer.parseInt(address,16);
         for (String symbol : symbolTable.keySet()) //checking if symbol is already in the table
@@ -73,7 +72,7 @@ public class symboltable {
         symbolTable.put(getSymbol(address),address);
         Addresses.add(address);
         if(addressDecimal > maxAddress){
-            maxAddress= Integer.parseInt(Integer.toHexString(addressDecimal).substring(0, 2));
+            maxAddress = Integer.parseInt(Integer.toHexString(addressDecimal).substring(0, 2));
         } else{
             minAddress = Integer.parseInt(Integer.toHexString(addressDecimal).substring(0, 2));
         }

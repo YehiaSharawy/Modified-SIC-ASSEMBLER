@@ -1,19 +1,20 @@
 public class programcounter {
-    opcode opcode_ = new opcode();
+    opcode op = new opcode();
     private int pcCounter;
     public String getPcCounter() {
-        return Integer.toString(pcCounter);
+        return Integer.toString(pcCounter,16).toUpperCase();
     }
     public void initializePC(int startingAddress){
         pcCounter = startingAddress;
     }
     public void incrementPC(String opCode){
-        if(opcode_.getOpFormat(opCode)==1)
+        op.addInstructionsToTable();
+        if(op.getOpFormat(opCode)==1)
             pcCounter+=1;
-        else if(opcode_.getOpFormat(opCode)==3)
+        else if(op.getOpFormat(opCode)==3)
             pcCounter+=3;
     }
-    public void incrementPC_Base(int length){
+    public void incrementPC_Byte(int length){
         pcCounter+=length;
     }
     public void incrementPC_Word(){

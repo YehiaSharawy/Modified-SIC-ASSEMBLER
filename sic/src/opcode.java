@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
 public class opcode {
+    private ArrayList<opcode> instructionSet = new ArrayList<>(32);
     private String mnemonic;
     private String opcode;
     private int format;
@@ -23,7 +24,6 @@ public class opcode {
     }
 
     //INSTRUCTION SET
-    private ArrayList<opcode> instructionSet = new ArrayList<>(32);
     public void addInstructionsToTable(){
         instructionSet.add(new opcode("ADD","18",3));
         instructionSet.add(new opcode("AND","40",3));
@@ -75,7 +75,7 @@ public class opcode {
         return 0;
     }
     // Extract the value of a specific bit in an integer at a given position. The result will be 0 if the bit is originally 0 and 1 if the bit is originally 1 at the specified position.
-    public int getOpBit(int input, int postition){
-        return (input>>postition)&1;
+    public int getOpBit(int input, int position){
+        return (input>>position)&1;
     }
 }
