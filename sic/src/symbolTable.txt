@@ -1,0 +1,11 @@
+COPYXX	1000
+Ares	1036
+Ceres	1033
+Rigel	102C
+Saturn	2061
+Io	1003
+Nunki	1039
+Ares	1036
+Saturn	2061
+Uranus	1044
+Draugr	0028
